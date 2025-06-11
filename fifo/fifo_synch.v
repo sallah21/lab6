@@ -88,7 +88,7 @@ fifo_reader_b
   .i_rst          (i_rst),  
 
   //FIFO reader interface
-  .i_wr_ptr_gray  (wr_ptr_gray_clk_a),
+  .i_wr_ptr_gray  (wr_ptr_gray_clk_b_synch),
   .i_data         (data_o),
   .o_rd_ptr_gray  (rd_ptr_gray_clk_b),
   
@@ -99,6 +99,18 @@ fifo_reader_b
 
 );
 
-
+// Fifo reader 2 step synchronizer for wr_ptr_gray_clk_a
+reg [(PTR_WIDTH-1):0]  wr_ptr_gray_clk_ff1;
+reg [(PTR_WIDTH-1):0]  wr_ptr_gray_clk_ff2;
+wire [(PTR_WIDTH-1):0] wr_ptr_gray_clk_b_synch;
+always @(posedge i_clk_b or negedge i_rst) begin
+  if (!i_rst) begin
+    wr_ptr_gray_clk_ff1 <= {(PTR_WIDTH){1'b0}};
+    wr_ptr_gray_clk_ff2 <= {(PTR_WIDTH){1'b0}};
+  end else begin
+    wr_ptr_gray_clk_ff1 <= wr_ptr_gray_clk_a;
+    wr_ptr_gray_clk_ff2 <= wr_ptr_gray_clk_ff1;
+  end
+end
 
 endmodule
