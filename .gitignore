@@ -1,0 +1,11 @@
+csrc/
+spyglass-1/
+*.log
+*.fsdb
+novas.*
+*.key
+*.daidir/
+verdiLog/
+.config/
+simv
+verdi_config_file
