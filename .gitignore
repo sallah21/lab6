@@ -9,3 +9,4 @@ verdiLog/
 .config/
 simv
 verdi_config_file
+*.fsdb.*
