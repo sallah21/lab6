@@ -1,5 +1,5 @@
 current_design my_synchronizer_CDC
-clock -name my_synchronizer_CDC.i_clk_a -period 20 -edge {0 10}
-clock -name my_synchronizer_CDC.i_clk_b -period 12.5 -edge {0 6.25}
+clock -name my_synchronizer_CDC.i_clk_a -period 12.5 -edge {0 6.25}
+clock -name my_synchronizer_CDC.i_clk_b -period 20 -edge {0 10}
 reset -name my_synchronizer_CDC.i_rst_a -value 0
 reset -name my_synchronizer_CDC.i_rst_b -value 0

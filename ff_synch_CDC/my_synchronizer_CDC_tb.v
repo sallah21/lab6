@@ -10,10 +10,10 @@ module my_synchronizer_CDC_tb
  
  parameter SYMULATION_RES      = 1_000_000_000; //Symultion resolution
  
- parameter CLK_a_F_HZ          = 50_000_000;    //Clock freq in HZ
+ parameter CLK_a_F_HZ          = 80_000_000;    //Clock freq in HZ
  parameter CLK_a_T             = SYMULATION_RES / CLK_a_F_HZ; 
  
- parameter CLK_b_F_HZ          = 80_000_000;    //Clock freq in HZ 
+ parameter CLK_b_F_HZ          = 50_000_000;    //Clock freq in HZ 
  parameter CLK_b_T             = SYMULATION_RES / CLK_b_F_HZ; 
  
       
