@@ -1,0 +1,4 @@
+current_design my_synchronizer_RDC
+clock -name my_synchronizer_RDC.i_clk -period 20 -edge {0 10}
+reset -name my_synchronizer_RDC.i_rst_a -value 0
+reset -name my_synchronizer_RDC.i_rst_b -value 0

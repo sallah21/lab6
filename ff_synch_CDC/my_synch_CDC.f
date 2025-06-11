@@ -1,0 +1,2 @@
+my_synchronizer_CDC_tb.v
+my_synchronizer_CDC.v

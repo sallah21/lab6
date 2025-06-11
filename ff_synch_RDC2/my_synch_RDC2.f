@@ -1,0 +1,2 @@
+my_synchronizer_RDC2_tb.v
+my_synchronizer_RDC2.v
