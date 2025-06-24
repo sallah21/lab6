@@ -51,11 +51,9 @@ my_synchronizer_CDC my_synchronizer_i
 
   .i_data_clk_a (data_a), 
 
-  .o_data_clk_b (data_clk_b)
-
+  .o_data_clk_b (data_clk_b),
+  .o_next_data_clk_a (next_data_clk_a)
 );
- 
- assign next_data_clk_a = 1'b1;
  
  //----------------------- SANDBOX Stop -------------------------------------   
    
